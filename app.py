@@ -5,13 +5,9 @@ app = Flask(__name__)
 
 # ----------------------------
 # Logging Setup
-# ----------------------------
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-
-# ----------------------------
 # Root Route
-# ----------------------------
+
 @app.route("/", methods=["GET"])
 def home():
     return jsonify(message="Welcome to the Flask CI/CD Microservice!"), 200
